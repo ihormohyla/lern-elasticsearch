@@ -24,3 +24,10 @@ awk -F\" '($2 ~ ""){print $1}' elastic_access.log | awk '{print $1}' | sort | un
 ```
 
 [Zabbix](https://zabbix-de.ria.com/)
+
+## Получение Took Time для экспорта в Zabbix
+```ini
+curl --silent  -X GET http://localhost:9200/search_index/_search | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["took"]'
+```
+
+[Bigdesk](http://couchdb.dom.ria.com:9400/_plugin/bigdesk/#nodes/2L2_4MI9QZCYh5EVPYzVTA)
