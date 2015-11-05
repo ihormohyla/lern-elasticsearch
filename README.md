@@ -1,4 +1,4 @@
-# NGINX + Elastisearch
+# NGINX + Elasticsearch
 
 
 ```ini
