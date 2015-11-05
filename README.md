@@ -22,7 +22,6 @@ log_format catalog '$remote_addr - $remote_user [$time_local] "$request" $status
 ```ini
 awk -F\" '($2 ~ ""){print $1}' elastic_access.log | awk '{print $1}' | sort | uniq -c | sort -nr
 ```
-[Playing HTTP Tricks with Nginx](https://www.elastic.co/blog/playing-http-tricks-nginx)
 
 [Zabbix](https://zabbix-de.ria.com/)
 
@@ -31,4 +30,13 @@ awk -F\" '($2 ~ ""){print $1}' elastic_access.log | awk '{print $1}' | sort | un
 curl --silent  -X GET http://localhost:9200/search_index/_search | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["took"]'
 ```
 
-[Bigdesk](http://couchdb.dom.ria.com:9400/_plugin/bigdesk/#nodes/2L2_4MI9QZCYh5EVPYzVTA)
+[Bigdesk DOM](http://couchdb.dom.ria.com:9400/_plugin/bigdesk/#nodes/2L2_4MI9QZCYh5EVPYzVTA)
+
+##Полезные ссылки
+[Playing HTTP Tricks with Nginx](https://www.elastic.co/blog/playing-http-tricks-nginx)
+
+[Bigdesk](http://bigdesk.org/)
+
+[Sense](https://github.com/bleskes/sense)
+
+[Head](https://mobz.github.io/elasticsearch-head/)
