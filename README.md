@@ -1,4 +1,4 @@
-# NGINX + Elasticsearch
+# NGINX + Elasticsearch: Better Together
 
 ## Конфиг Nginx
 ```ini
@@ -22,6 +22,7 @@ log_format catalog '$remote_addr - $remote_user [$time_local] "$request" $status
 ```ini
 awk -F\" '($2 ~ ""){print $1}' elastic_access.log | awk '{print $1}' | sort | uniq -c | sort -nr
 ```
+[Playing HTTP Tricks with Nginx](https://www.elastic.co/blog/playing-http-tricks-nginx)
 
 [Zabbix](https://zabbix-de.ria.com/)
 
